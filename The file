@@ -1,0 +1,169 @@
+@echo off
+:start
+    cls
+    echo --------------------------------------------------------------------------------
+    echo Welcome to Tree Information 
+    echo.
+    echo --------------------------------------------------------------------------------
+:Tree
+    
+    echo What type of tree would you like to know about out of these nine?
+    echo.
+    echo (1) Birch
+    echo.
+    echo (2) Oak
+    echo.
+    echo (3) Maple
+    echo.
+    echo (4) Huon Pine
+    echo.
+    echo (5) Spruce
+    echo.
+    echo (6) Sequoia
+    echo.
+    echo (7) Balsa
+    echo.
+    echo (8) Eucalyptus
+    echo.
+    echo (9) Willow
+    echo.
+    
+    set /p choice=
+    echo.
+    if %choice%==1 goto:Birch
+    if %choice%==2 goto:Oak
+    if %choice%==3 goto:Maple
+    if %choice%==4 goto:Huon_Pine
+    if %choice%==5 goto:Spruce
+    if %choice%==6 goto:Sequoia
+    if %choice%==7 goto:Balsa
+    if %choice%==8 goto:Eucalyptus
+    if %choice%==9 goto:Willow
+    if %choice%==0 goto:end
+    pause
+    
+:Birch
+
+    echo BIRCH
+    echo.
+    echo Family - Betulaceae
+    echo Foliage type - Deciduous
+    echo Height - 9 to 16 metres tall
+    echo Lifespan - 30 to 200 years
+    echo Region(s) - Europe, Asia and North America
+    echo Fun fact - Birch tree pollen is responsible for 15 to 20 percent of cases of & echo            hay fever in the northern hemisphere.
+    goto:end
+    
+:Oak
+
+    echo OAK
+    echo.
+    echo Family - Fagaceae
+    echo Foliage type - Evergreen or Deciduous depending on species
+    echo Height - 15 to 22 metres
+    echo Lifespan - 200+ years
+    echo Reigon(s) - Northern hemisphere
+    echo Fun fact - Oak is national plant of many countries including USA, England, & echo            France, Germany, Latvia, Poland and Serbia. It symbolizes strength & echo            and endurance.
+    goto:end
+
+:Maple
+
+    echo MAPLE
+    echo.
+    echo Family - Aceraceae
+    echo Foliage type - Mostly Deciduous
+    echo Height - 0.2 to 44 metres
+    echo Lifespan -  80 - 100 years
+    echo Region(s) - Mostly Northern hemisphere
+    echo Fun fact - It takes 40-50 gallons of tree sap for the production of & echo            one gallon of syrup.
+    goto:end
+    
+:Huon_Pine
+    
+    echo HUON PINE
+    echo.
+    echo Family - Podocarpaceae
+    echo Foliage type - Evergreen
+    echo Height - 10 to 20 metres
+    echo Lifespan - The oldest is 3000 years old
+    echo Reigon(s) - Southwestern corner of Tasmania, Australia
+    echo Fun fact - Huon pine is not a pine, it is a conifer.
+    goto:end
+
+
+:Spruce
+
+    echo SPRUCE
+    echo.
+    echo Family - Pinaceae
+    echo Foliage type - Deciduous
+    echo Height - 20-60 metres
+    echo Lifespan - 150 to 200 years
+    echo Reigon(s) - Northern temperate and boreal (taiga) regions 
+    echo Fun fact - A spruce tree was found growing inside of someone once 
+    goto:end
+
+:Sequoia
+
+    echo SEQUOIA
+    echo.
+    echo Family - Cupressaceae
+    echo Foliage type - Evergreen
+    echo Height - Up to 115.5 metres tall
+    echo Lifespan - 1200 to 1800 years or more
+    echo Reigon(s) - Coastal California, United States of America
+    echo Fun fact - Sequoias are  the fastest growing trees on Earth
+    goto:end
+
+:Balsa
+
+    echo BALSA
+    echo.
+    echo Family - Malvaceae
+    echo Foliage type - Evergreen, but may be Deciduous in the dry-season 
+    echo Height - Up to 30 m
+    echo Lifespan - 30 to 40 years
+    echo Reigon(s) - Brazil and Bolivia up to southern Mexico
+    echo Fun fact - Balsa is a hardwood
+    goto:end
+
+:Eucalyptus
+
+    echo EUCALYPTUS
+    echo.
+    echo Family - Myrtaceae
+    echo Foliage type - Nearly all Evergreen
+    echo Height - Tallest is 99.6 metres tall
+    echo Lifespan - 400 years
+    echo Reigon(s) - Mostly Australia with some on other countries near the equator
+    echo Fun fact - The nectar of some eucalypts produces high-quality monofloral honey
+    goto:end
+    
+:Willow
+
+    echo WILLOW
+    echo.
+    echo Family - Salicaceae
+    echo Foliage type - Deciduous
+    echo Height - 0.06 to 
+    echo Lifespan - Around 50 years
+    echo Reigon(s) - Cold and temperate regions of the Northern Hemisphere
+    echo Fun fact - There is a species of Willow named "Cricket Bat Willow" as it & echo            is the only type of wood a proper cricket bat can be made from
+    goto:end
+    
+:end
+
+    echo.
+    echo Press 1 to Choose another tree
+    echo.	
+    echo Press 2 to Choose another tree and clear previous data
+    echo.
+    echo Press 3 to Exit
+    echo.
+    
+    set /p restart=
+    if %restart%==1 goto:Tree
+    if %restart%==2 goto:start
+    if %restart%==3 goto:EOF
+
+pause
